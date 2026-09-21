@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: 'Poppins', system-ui, sans-serif;
+}
+
+body {
+  @apply bg-white text-gray-800 dark:bg-gray-950 dark:text-gray-100 transition-colors duration-200;
+}
+
+/* Simple, tasteful scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-thumb { background: #C3CDFB; border-radius: 8px; }
+.dark ::-webkit-scrollbar-thumb { background: #5F4E8F; }
+
+.btn-primary {
+  @apply bg-primary hover:bg-primary-dark text-white font-medium px-5 py-2.5 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed;
+}
+.btn-outline {
+  @apply border border-primary text-primary hover:bg-primary hover:text-white font-medium px-5 py-2.5 rounded-lg transition-colors;
+}
+.card {
+  @apply bg-white dark:bg-gray-900 rounded-xl shadow-card border border-gray-100 dark:border-gray-800;
+}
+.input {
+  @apply w-full px-4 py-2.5 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-primary/40;
+}
